@@ -220,7 +220,7 @@ main{
 /* active */
 
 
-.activeBox {
+.active{
     position: relative;
     background: url(../img/active-bg02.png) center center no-repeat;
     background-position: top center;
@@ -229,7 +229,7 @@ main{
     height: 660px;
 }
 
-.activeBox::before {
+.active::before {
     position: absolute;
     content: "";
     background: url(../img/active-bg01.png) bottom center no-repeat;
@@ -239,7 +239,7 @@ main{
     top: -310px;
 }
 
-.activeBox::after {
+.active::after {
     position: absolute;
     content: "";
     background: url(../img/active-bg03.png) bottom center no-repeat;
