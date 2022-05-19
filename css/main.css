@@ -1,5 +1,17 @@
+main{
+    overflow-x: hidden;
+}
+
+
+/* Header 頁首 */
+
+.header .nav{
+    background-color: #b29796;
+}
 
 .header .menu{
+
+    background-color: #b29796;
     line-height: 84px;
     z-index: 9999; 
     position: fixed;
@@ -7,746 +19,1829 @@
     top: 0px;
 }
 
-.bg-blue{
-    background-color: #2F3B49;
+.bg-brown{
+    background-color: #b29796;
 }
 
 .navbar-brand img{
-    width: 100px;
+    width: 100%;
 }
 
-/* banner */
-.banner{
-    background-color: rgba(97, 105, 120, 1);
-    height: 330px;
+
+/* .header .nav-item ul{
+    display: block;
+    cursor: pointer;
+    color: #ffffff;
 }
 
-.owl-theme .owl-nav.disabled+.owl-dots {
-    margin-top: 0px;
+
+.menu ul{
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: end;
+}
+
+    .menu ul li{
+        padding: 0 11px;
+    }
+
+        .menu ul li a{
+            display: block;
+            cursor: pointer;
+            color: #fff;
+        }
+        .menu ul li a:hover{
+            display: block;
+            cursor: pointer;
+            color: #3B2222;
+            text-decoration: none;
+            font-weight: 600;
+        }
+        .menu ul li a:active{
+            display: block;
+            cursor: pointer;
+            color: #595050;
+        } */
+
+
+.banner {
+    background: url(../img/banner.png) center center no-repeat;
+    background-size: cover;
+    height: 327px;
+}
+
+
+/* main 中間 */
+.newsBox{ 
+    background: url(../img/news-bg.png) center center no-repeat;
+    background-size: cover;
+    padding: 150px 0;
+}
+
+.new-inner{
+    position: relative;
+}
+.new-inner::before{
+    content: "";
+    position: absolute;
+    background: url(../img/news-flower02.png) center center no-repeat;
+    background-size: contain;
+    width: 188px;
+    height: 188px;
+    bottom: 15px;
+    left: -10px;
+    z-index: 1;
+    transform: rotate(335deg);
+    pointer-events: none;
+}
+.new-inner::after{
+    content: "";
+    position: absolute;
+    background: url(../img/news-flower01.png) center center no-repeat;
+    background-size: contain;
+    width: 200px;
+    height: 200px;
+    top: -80px;
+    right: 20px;
+    z-index: 2;
+    transform: rotate(335deg);
+    pointer-events: none;
+}
+
+.new-item{
+    position: relative;
+    margin-bottom: 95px;
+}
+
+    .new-item .newsTitle{
+        padding: 8px 32px;
+        border-style: solid;
+        border-width: 1px;
+        border-color: #512F2F;
+        border-radius: 10px 10px 0 0;
+        background-color: rgba(255,255,255,.8);
+        color: #512F2F;
+        font-size: x-large;
+        font-weight: bold;
+    }
+
+    .new-item .newslist{
+        border-style: solid;
+        border-width: 1px;
+        border-color: #512F2F;
+        border-radius: 0 0 10px 10px;
+        background-color: rgba(255,255,255,.5);
+    }
+
+        .new-item .newslist ul{
+            margin-bottom: 28px;
+            padding: 8px 0 0 ;
+            list-style: none;
+            font-size: large;
+        }
+
+            .new-item .newslist ul li{
+                border-bottom-style: dashed;
+                border-bottom-color: rgba(81,47,47,.4);
+                border-bottom-width: 1px;
+                position: relative;
+                padding: 8px 20px;
+                margin: 0 34px;
+            }   
+            .new-item .newslist ul li:last-child{
+                border: none;
+            }
+            .new-item .newslist ul li::before{
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #512F2F;
+                border-radius: 50%;
+                bottom: -3px;
+                left: 0;
+            }
+            .new-item .newslist ul li:last-child::before{
+                background: none;
+            }
+            .new-item .newslist ul li::after{
+                position: absolute;
+                content: "";
+                width: 5px;
+                height: 5px;
+                background-color: #512F2F;
+                border-radius: 50%;
+                bottom: -3px;
+                right: 0;
+            }
+            .new-item .newslist ul li:last-child::after{
+                background: none;
+            }
+
+                .new-item .newslist ul li a{
+                    color: #595050;
+                }
+                .new-item .newslist ul li a:hover{
+                    color: #512F2F;
+                    font-weight: bold;
+                    text-decoration: none;
+                }
+                .new-item .newslist ul li a:active{
+                    color: #FFFFFF;
+                }
+
+/* new-owl  about 輪播按鈕共用 */
+.newsBox.new-inner{
     position: relative;
 }
 
-/* 引言 */
-.preface{
-    background-color: rgba(97, 105, 120, 1);
-    height: 550px;
-    color: white;
-    font-weight: 500;
-    font-size: 26px;
-    font-family: DFKai-sb;
-    letter-spacing: 3px;
+.newsBox .owl-dots{
+    position:absolute;
+    bottom: 98px;
+    left: 500px;
+    margin: auto;
+}
+
+.newsBox .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span,
+.aboutBox .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span
+{
+    background: #6d4545;
+}
+
+.newsBox .owl-theme .owl-dots .owl-dot span,
+.aboutBox .owl-theme .owl-dots .owl-dot span{
+    background: #f3eded;
+    border: 1px solid #6d4545;
+}
+
+
+/* active */
+
+
+.activeBox {
+    position: relative;
+    background: url(../img/active-bg02.png) center center no-repeat;
+    background-position: top center;
+    background-size: contain;
+    width: 100%;
+    height: 660px;
+}
+
+.activeBox::before {
+    position: absolute;
+    content: "";
+    background: url(../img/active-bg01.png) bottom center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 310px;
+    top: -310px;
+}
+
+.activeBox::after {
+    position: absolute;
+    content: "";
+    background: url(../img/active-bg03.png) bottom center no-repeat;
+    background-size: contain;
+    width: 100%;
+    height: 144px;
+    bottom: -27px;
+    z-index: 0;
+}
+
+
+/* 
+.activeBox{
+    position: relative;
+    background: url(../img/active-bg02.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 683px;
+    padding: 150px 0;
+}
+
+    .activeBox::before{
+        position: absolute;
+        content: "";
+        background: url(../img/active-bg01.png) center center no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 204px;
+        top: -203px;
+    }
+
+.activeBox-bottom{
+    background: url(../img/active-bg03.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 204px;
+    position: absolute;
+    bottom: -203px;
+} */
+
+/* .activeBox::after{
+    position: absolute;
+    content: "";
+    background: url(../img/active-bg03.png) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 204px;
+    bottom: -203px;
+} */
+
+/* -------新增------------- */
+.active-picture {
     position: relative;
 }
-.preface01{
-    position: absolute;
-    left: 250px;
-    top: 70px;
-    text-shadow: 0 0 10px #F4F4F4,0 0 20px #F4F4F4;
-} 
-.preface02{
-    position: absolute;
-    left: 320px;
-    top: 130px;
-    text-shadow: 0 0 10px #F4F4F4,0 0 20px #F4F4F4;
-} 
-.preface03{
-    position: absolute;
-    right: 300px;
-    top: 225px;
-    text-shadow: 0 0 10px #F4F4F4,0 0 20px #F4F4F4,0 0 30px #F4F4F4;
-} 
 
-/* .rule{
-    color: rgb(39, 26, 36);
-    font-size: 22px;
-    white-space: pre;
-    font-family: Microsoft JhengHei;
-    letter-spacing: 1px;
+.active-picture img {
     position: absolute;
-    left: 50px;
-    top: 380px;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+.show {
+    z-index: 9999;
+}
+
+
+/* -------------------- */
+
+.activeTitle{
+    color: #512F2F;
+    font-size: x-large;
+    font-weight: bold;
+    line-height: 50px;
+    position: relative;
+    z-index: 1;
+}
+    .activeTitle::before{
+        content: "";
+        position: absolute;
+        background: url(../img/active-line.png) center center no-repeat;
+        background-size: contain;
+        width: 200px;
+        height: 108px;
+    }
+/* .activeTitle::after{
+    content: "";
+    position: absolute;
+    background: url(../img/active-flower.png) center center no-repeat;
+    background-size: contain;
+    width: 250px;
+    height: 250px;
+    left: 765px;
+    bottom: -20px;
 } */
 
-/* 塔羅
-.tarot{
-    background-color: rgba(97, 105, 120, 1);
-    height: 400px;
-} */
+.activelist{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
 
-/* 介紹 */
-.productIntroduction{
-    background-color: rgba(97, 105, 120, 1);
-    height: 550px;
 }
-.productPhoto{
-    background: url(../img/tarot-introduction.png) center center no-repeat;
+
+    .listItem a{
+        color: rgba(81,47,47,.9);
+        letter-spacing: 8px;
+        font-size: large;
+        font-weight: bold;
+        line-height: 55px;
+        z-index: 2;
+        position: relative;
+    }
+        .listItem a:hover{
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .listItem a:active{
+            color: #e0e0cb;
+        }
+
+    .active-item{
+        position: relative;
+    }
+        .active-item::before{
+            content: "";
+            position: absolute;
+            background: url(../img/active-papertape01.png) center center no-repeat;
+            background-size: contain;
+            width: 215px;
+            height: 113px;
+            top: -50px;
+            left: 35px;
+            transform: rotate(347deg);
+            z-index: 3;
+            pointer-events: none;
+        }
+        .active-item::after{
+            content: "";
+            position: absolute;
+            background: url(../img/active-papertape02.png) center center no-repeat;
+            background-size: contain;
+            width: 215px;
+            height: 135px;
+            bottom: -63px;
+            right: 33px;
+            transform: rotate(355deg);
+            z-index: 3;
+            pointer-events: none;
+        }
+
+
+.active-pictureBox{
+    background-color: #FFFFFF;
+    box-shadow: 0px 5px 15px rgba(88, 85, 85, .5);
+    padding: 15px;
+    transform: rotate(5deg);
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+    }
+
+.active-picture img{
+    width: 100%;
+}
+
+.active-flower{
+    position: absolute;
+    background: url(../img/active-flower.png) center center no-repeat;
     background-size: contain;
-    height: 300px;
-    margin-top: 80px;
+    width: 100%;
+    height: 250px;
+    right: -110px;
+    top: -175px;
+    z-index: 0;
 }
-.productText{
-    color: rgb(44, 32, 49);
-    font-size: 18px;
-    white-space: pre;
-    font-family: Microsoft JhengHei;
-    letter-spacing: 1px;
+
+/* active輪播 */
+.active-picture .owl-nav{
+    display: none;
+}
+
+.active-picture .owl-dots{
+    display: none;
+}
+
+/* about */
+.aboutBox{
+    background: url(../img/about-bg.png) center center no-repeat;
+    background-size: cover;
+    padding: 350px 0 250px;
+    margin: -175px 0 0;
+}
+
+.aboutTitle{
     text-align: center;
+    padding: 0 0 20px;
 }
 
-.logoIntroduction{
-    background-color: rgba(97, 105, 120, 1);
-    height: 550px;
+.aboutcard{
+    background-color: #FFFFFF;
+    box-shadow: 0px 7px 7px rgba(88, 85, 85, .3);
+    padding: 14px 20px;
+    position: relative;
 }
 
-.logoText {
-    color: rgb(36, 46, 33);
-    font-size: 26px;
-    white-space: pre;
-    font-family: Microsoft JhengHei;
-    letter-spacing: 1px;
-    text-align: center;
-}
-.logoText p{
-    margin-bottom: 0px;
-}
-
-.logoPhoto{
-    background: url(../img/team-introduction.png) center center no-repeat;
+.aboutcard::after{
+    content: "";
+    position: absolute;
+    background: url(../img/about-flower.png) center center no-repeat;
     background-size: contain;
-    height: 350px;
-    margin-top: 80px;
+    width: 100%;
+    height: 504px;
+    top: 125px;
+    right: -360px;
+    z-index: 2;
+    pointer-events: none;
 }
+    
+    .aboutcard img{
+        width: 100%;
+    }
 
-.packageIntroduction{
-    background-color: rgba(97, 105, 120, 1);
-    height: 550px;
-}
-.packagePhoto{
-    background: url(../img/team-introduction.png) center center no-repeat;
-    background-size: contain;
-    height: 350px;
-    margin-top: 80px;
-}
-
-.packageText {
-    color: rgb(44, 32, 49);
-    font-size: 26px;
-    white-space: pre;
-    font-family: Microsoft JhengHei;
-    letter-spacing: 1px;
+.aboutpeople{
+    background-color: #FFFFFF;
+    box-shadow: 6px 6px 7px rgba(88, 85, 85, .3);
     text-align: center;
+    top: -20px;
+    left: 0;
+    }
+
+    .aboutpeople img{
+        padding: 20px 25px;
+        width: 100%;
+    }
+
+        .aboutpeople p{
+            padding: 10px 0 15px;
+            color: #512F2F;
+        }
+
+/* about 輪播 */
+.about-inner .owl-nav {
+    display: none;
 }
-.packageText p{
-    margin-bottom: 0px;
+.about-inner .owl-dots{
+    margin: 10px;
 }
 
-.perfumeIntroduction{
-    background-color: rgba(97, 105, 120, 1);
-    height: 550px;
-}
-.perfumePhoto{
-    background: url(../img/team-introduction.png) center center no-repeat;
-    background-size: contain;
-    height: 350px;
-    margin-top: 80px;
+ /* footer 頁尾 */
+.footer{
+    background-color: #b29796;
 }
 
-.perfumeText {
-    color: rgb(36, 46, 33);
-    font-size: 26px;
-    white-space: pre;
-    font-family: Microsoft JhengHei;
-    letter-spacing: 1px;
-    text-align: center;
-}
-.perfumeText p{
-    margin-bottom: 0px;
+.info{
+    padding: 32px 0;
 }
 
+    .info p{
+        color: #FFFFFF;
+        font-size: 16px;
+        font-weight: lighter;
+    }
 
+.icon{
+    padding-top: 24px;
+    letter-spacing: 8px;
+}
 
-/* 回頂端按鈕 */
-.toTopBtn{
+    .icon a{
+        color: #512F2F;
+        font-size: 35px;
+    }
+    .icon a:hover {
+        color: #595050;
+    } 
+    .icon a:active {
+        color: #FFFFFF;
+    }
+/* ToTopBtn */
+.toTopBtn a {
     display: block;
     position: fixed;
-    cursor: pointer;
     right: 30px;
     bottom: 30px;
     width: 45px;
     height: 45px;
-    background: #dad0a7;
-    color: rgb(255, 255, 255);
+    background: #512F2F;
+    color: #fff;
     font-size: x-large;
     z-index: 9999;
-    box-shadow: 2px 2px 10px #f7ed94;
-    border-radius: 5px;
-    opacity: 0.5;
-    filter: Alpha(opacity=50);
-    transform: translateY(0%);
-    transition: all 0.2s linear;
-}
-.toTopBtn:hover{
-    opacity: 0.9;
-    filter: Alpha(opacity=90);
-} 
-
-.toTopBtn.hide{
-    opacity: 0;
-    filter: Alpha(opacity=0);
-    transform: translateY(150%);
 }
 
-.toTopBtn i {
+.toTopBtn a i {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
-/* footer */
-.footer{
-    background-color: #2F3B49;
-    color: #F4F4F4;
-    height: 300px;
-    padding: 50px 30px 0;
-    font-size: 18px;
-}
-
-
+    
 /* 響應式 RWD 
 --------------------------*/
 @media (min-width:1681px) and (max-width:1920px) {
 
 }
 
+
 @media (min-width:1550px) and (max-width:1680px) {
 
 }
 
+
 @media (min-width:1300px) and (max-width:1549.9px) {
-
-}
-
-@media (min-width:1200px) and (max-width:1299.9px) {
-
-}
-
-@media (min-width:992px) and (max-width:1199.9px) {
-
-}
-
-@media (min-width:768px) and (max-width:991px) {
-     /* top */
-     .navbar{
-        font-size: 36px;
-    }
-    .navbar .dropdown-item{
-        font-size: 32px;
-    }
+    /* menu */
     .navbar-brand img {
-        width: 200px;
-    }
-    .navbar-toggler {
-        padding: 8px 10px;
-        font-size: 36px;
-    }
-    .banner {
-        height: 148px;
-    }
-    .owl-theme .owl-nav.disabled+.owl-dots {
-        margin-top: 3px;
-        position: relative;
-    }
-    
-  
-    /* 介紹  */
-    .phone{
-        flex-direction: column-reverse;
+        width: 500px;
     }
 
-    .preface {
-        height: 550px;
-        font-size: 32px;
-    }
-    .preface01{
-        left: 25px;
-        top: 200px;
-    }
-    .preface02{
-        left: 35px;
-        top: 280px;
-    }
-    .preface03{
-        right: 20px;
-        top: 380px;
-    }
-
-    .productIntroduction{
-        height: 1300px;
-    }
-    .productText{
-        font-size: 30px;
-    }
-    .productPhoto {
-        height: 450px;
-    }
-
-    .logoIntroduction{
-        height: 1300px;
-    }
-    .logoText{
-        font-size: 30px;
-    }
-    .logoPhoto {
-        height: 450px;
-    }
-
-    .packageIntroduction{
-        height: 1300px;
-    }
-    .packageText{
-        font-size: 30px;
-    }
-    .packagePhoto {
-        height: 450px;
-    }
-
-    .perfumeIntroduction{
-        height: 1500px;
-    }
-    .perfumeText{
-        font-size: 30px;
-    }
-    .perfumePhoto {
-        height: 450px;
-    }
-
-    /* 回頂端按鈕 */
-    .toTopBtn{
-        width: 60px;
-        height: 60px;
-        font-size: 32px;
-    }
-
-    /* 底部 */
-    .footer{
-        height: 300px;
-        padding: 25px 30px 0;
+    .navbar-nav{
         font-size: 26px;
     }
-}
 
-@media (min-width:576px) and (max-width:767.9px) {
-    /* top */
-    .navbar{
-        font-size: 30px;
-    }
-    .navbar .dropdown-item {
+    .dropdown-item{
         font-size: 24px;
     }
-    .navbar-brand img {
-        width: 130px;
-    }
-    .navbar-toggler {
-        padding: 8px 10px;
+
+    /* news */
+    .new-item .newsTitle {
         font-size: 30px;
     }
-    
-    .owl-theme .owl-nav.disabled+.owl-dots {
-        margin-top: 3px;
-        position: relative;
-    }
-    
-  
-    /* 介紹  */
-    .phone{
-        flex-direction: column-reverse;
-    }
-
-    .preface {
-        height: 550px;
-        font-size: 32px;
-    }
-    .preface01{
-        left: 25px;
-        top: 50px;
-    }
-    .preface02{
-        left: 35px;
-        top: 130px;
-    }
-    .preface03{
-        right: 20px;
-        top: 230px;
-    }
-
-    .productIntroduction{
-        height: 1300px;
-    }
-    .productText{
-        font-size: 30px;
-    }
-    .productPhoto {
-        height: 450px;
-    }
-
-    .logoIntroduction{
-        height: 1300px;
-    }
-    .logoText{
-        font-size: 30px;
-    }
-    .logoPhoto {
-        height: 450px;
-    }
-
-    .packageIntroduction{
-        height: 1300px;
-    }
-    .packageText{
-        font-size: 30px;
-    }
-    .packagePhoto {
-        height: 450px;
-    }
-
-    .perfumeIntroduction{
-        height: 1500px;
-    }
-    .perfumeText{
-        font-size: 30px;
-    }
-    .perfumePhoto {
-        height: 450px;
-    }
-
-    /* 回頂端按鈕 */
-    .toTopBtn{
-        width: 60px;
-        height: 60px;
-        font-size: 32px;
-    }
-
-    /* 底部 */
-    .footer{
-        height: 300px;
-        padding: 25px 30px 0;
+    .new-item .newslist ul {
         font-size: 26px;
     }
-}
 
-@media (min-width:376px) and (max-width:575.9px) {
-    /* top */
-    .navbar{
-        font-size: 18px;
+    /* active */
+
+
+    .activeBox {
+        height: 730px;
     }
-    .navbar .dropdown-item{
-        font-size: 16px;
-    }
-    .navbar-brand img {
-        width: 80px;
-        margin-left: 10px;
-    }
-    .navbar-toggler {
-        padding: 5px 7px;
-        font-size: 20px;
-    }
-    .navbar-toggler-icon {
-        width: 20px;
-        height: 20px;
-    }
-    .banner {
-        height: 97px;
+
+    .activeBox-bottom {
+        bottom: -132px;
+        height: 255px;
     }
     
+    .activeTitle {
+        top: 230px;
+        font-size: 36px;
+        letter-spacing: 10px;
+    }
+
+    .activeTitle::before {
+        width: 230px;
+        height: 135px;
+    }
+
+    .activelist {
+        top: 250px;
+    }
+
+    .listItem a {
+        letter-spacing: 8px;
+        font-size: 32px;
+        font-weight: bold;
+        line-height: 80px;
+    }
+
+    .active-item::after {
+        width: 250px;
+        height: 180px;
+        right: -113px;
+        bottom: -83px;
+    }
+
+    .active-pictureBox {
+        width: 800px;
+    }
+
+    .active-item::before {
+        width: 250px;
+        height: 150px;
+        top: -65px;
+        left: -40px;
+    }
+
+    .active-flower {
+        width: 350px;
+        height: 350px;
+        right: 3px;
+        top: -241px;
+    }
+
+    /* about */
+    .aboutBox {
+        margin: -40px
+    }
+
+    .aboutTitle img{
+        width: 300px;
+    }
+
+    .aboutpeople p {
+        padding: 10px 0 20px;
+        font-size: 22px;
+    }
+
+    /* footer */
+    .info p {
+        font-size: 22px;
+    }
+    .icon a {
+        font-size: 42px;
+    }
+
+}
+
+/*  */
+@media (min-width:1200px) and (max-width:1299.9px) {
+    /* menu */
+    .navbar-brand img {
+        width: 480px;
+    }
+
+    .navbar-nav{
+        font-size: 24px;
+    }
+
+    .dropdown-item{
+        font-size: 20px;
+    }
+
+    /* news */
+    .new-item .newsTitle {
+        font-size: 30px;
+    }
+    .new-item .newslist ul {
+        font-size: 26px;
+    }
+
+    /* active */
+    .activeBox {
+        height: 695px;
+    }
+
+    .activeBox-bottom {
+        bottom: 36px;
+    }    
+    
+    .activeTitle {
+        font-size: 31px;
+        letter-spacing: 8px;
+    }
+
+    .listItem a {
+        letter-spacing: 8px;
+        font-size: 28px;
+        font-weight: bold;
+        line-height: 65px;
+    }
+
+    .active-item::after {
+        right: 33px;
+        bottom: -35px;
+    }
+
+    /* about */
+    .aboutpeople p {
+        padding: 10px 0 20px;
+        font-size: 20px;
+    }
+
+    /* footer */
+    .info p {
+        font-size: 18px;
+    }
+
+
+}
+
+/* 桌機  */
+@media (min-width:992px) and (max-width:1199.9px) {
+    /* menu */
+    .navbar-nav{
+        font-size: 20px;
+    }
+
+    .dropdown-item{
+        font-size: 18px;
+    }
+ 
+    /* news */
+    .newsBox .owl-theme .owl-nav.disabled+.owl-dots {
+        margin-top: 10px;
+        left: 440px;
+    }
+
+    /* active */
+    .activeBox-bottom {
+        bottom: 32px;
+    }
+
+    .listItem a {
+        letter-spacing: 7px;
+        font-size: 26px;
+        line-height: 65px;
+        bottom: -110px;
+    }
+
+    .activeTitle {
+        font-size: 32px;
+        letter-spacing: 10px;
+        bottom: -100px;
+    }
+
+    .active-pictureBox {
+        width: 100%;
+        top: -45px;
+    }
+
+    .active-item::before {
+        width: 250px;
+        height: 180px;
+        top: -113px;
+        left: -47px;
+    }
+
+    .active-item::after {
+        width: 250px;
+        height: 250px;
+        bottom: -63px;
+        right: -50px;
+    }
+
+    .active-flower {
+        width: 250px;
+        height: 300px;
+        right: 0px;
+        top: -250px;
+    }
+
+    /* about */
+    .aboutcard::after {
+        width: 300px;
+        height: 450px;
+        top: 82px;
+        right: -131px;
+    }
+    .aboutpeople p {
+        padding: 10px 0 20px;
+        font-size: 18px;
+    }
+
+    /* footer */
+    .info p {
+        font-size: 18px;
+    }
+    .icon {
+        letter-spacing: 35px;
+        line-height: 46px;
+    }
+    .icon a {
+        font-size: 45px;
+    }
+
+}
+
+/* 平板  */
+@media (min-width:768px) and (max-width:991px) {
+    /* menu */
+    .navbar-nav{
+        font-size: 22px;
+    }
+
+    .navbar-toggler {
+        padding: 10px 14px;
+        font-size: 18px;
+    }
+
+    .dropdown-item{
+        font-size: 20px;
+    }
+
+
+    /* news */
+    .newsBox {
+        padding: 100px 0 160px;
+    }
+
+    .new-inner::before {
+        width: 160px;
+        height: 160px;
+        bottom: 15px;
+        left: -73px;
+    }
+
+    .new-inner::after {
+        width: 170px;
+        height: 170px;
+        top: -64px;
+        right: -46px;
+    }
+
+    .new-item .newsTitle {
+        font-size: 26px;
+    }
+
+    .new-item .newslist ul {
+        font-size: 19px;
+    }
+
+    .newsBox .owl-dots {
+        left: 322px;
+    }
+
+
+    /* active */
+ 
+
+    .activeBox {
+        height: 532px;
+        padding: 0;
+    }
+
+    .activeBox-bottom {
+        height: 242px;
+        bottom: 143px;
+    }
+
+    .activeTitle {
+        top: 110px;
+        letter-spacing: 8px;
+        font-size: 24px;
+    }
+
+    .activeTitle ::before{
+        width: 180px;
+        height: 97px;
+        top: -7px;
+    }
+
+    .listItem a {
+        top: 110px;
+        line-height: 55px;
+        font-size: 20px;
+    }
+
+    .active-pictureBox{
+        height: 328px;
+        top: 90px;
+        left: -94px;
+        width: 450px;
+    }
+
+    .active-flower {    
+        width: 200px;
+        height: 200px;
+        right: -14px;
+        top: -41px;
+    }
+
+    .active-item::before {
+        width: 180px;
+        height: 130px;
+        top: 34px;
+        left: -120px;
+    }
+
+    .active-item::after {
+        width: 180px;
+        height: 130px;
+        bottom: -76px;
+        right: -50px;
+    }
+
+    /* about */
+    .aboutBox {
+        padding: 350px 0 200px;
+    }
+
+    .aboutTitle img{
+        width: 220px;
+    }
+
+    .aboutpeople{
+        width: 210px;
+        height: 312px;
+        margin: 15px auto;
+    }
+
+    .aboutcard {
+        width: 450px;
+        left: -46px;
+    }
+
+    .aboutcard::after {
+        width: 350px;
+        height: 350px;
+        top: 60px;
+        right: -179px;
+    }
+
+    .aboutpeople img {
+        padding: 12px 14px;
+    }
+
+    .aboutBox .owl-carousel .owl-stage-outer {
+        right: -55px;
+    }
+
+    .about-inner .owl-dots {
+        margin: 10px 0 0 110px;
+    }
     .owl-theme .owl-dots .owl-dot span {
         width: 8px;
         height: 8px;
-        margin: 16px 8px;
+        margin: 5px 6px;
     }
 
-    /* 介紹  */
+    /* footer */
+    .icon {
+        letter-spacing: 15px;
+        text-align: end;
+    }
+
+    .icon a{
+        font-size: 45px;
+    }
+
+    .info p {
+        font-size: 16px;
+        white-space: nowrap;
+    }
+
+}
+
+/* 手機橫  */
+@media (min-width:576px) and (max-width:767.9px) {
     .phone{
         flex-direction: column-reverse;
     }
+    .phone li{
+        float: left;
+        margin-right: 25px;
+        line-height: 40px;
+    }
 
-    .preface {
-        height: 250px;
+   /* menu */
+     .navbar-nav{
+        font-size: 24px;
+    }
+
+    .navbar-toggler {
+        padding: 8px 12px;
         font-size: 20px;
     }
-    .preface01{
-        left: 25px;
+
+    .navbar-brand{
+        width: 200px;
+    }
+    
+    .navbar-brand img{
+        width: 360px;
+        height: 65px;
+    }
+
+    .dropdown-item{
+        font-size: 20px;
+    }
+
+    .banner{
+        height: 230px;
+    }
+    
+    /* news */
+    .newsBox {
+        padding: 85px 0 130px;
+    }
+
+    .new-item .newslist ul {
+        font-size: 20px;
+    }
+
+    .new-inner::before {
+        width: 100%;
+        height: 140px;
+        bottom: 24px;
+        left: -238px;
+    }
+
+    .new-inner::after {
+        width: 100%;
+        height: 131px;
+        top: -40px;
+        right: -230px;
+    }
+
+    .newsBox .owl-dots {
+        left: 227px;
+    }
+
+
+    /* active */
+    .activeBox {
+        height: 215px;
+        padding: 0;
+    }
+    .activeBox-bottom {
+        bottom: -88px;
+    }
+
+    .activeTitle {
+        left: -21px;
+        top: -45px;
+        letter-spacing: 4px;
+        font-size: 22px;
+    }
+
+    .activeTitle::before{
+        width: 160px;
+        height: 100px;
+        top: 2px;
+    }
+
+    .listItem a {
+        left: -20px;
+        top: -43px;
+        line-height: 40px;
+        font-size: 20px;
+    }
+
+    .active-pictureBox{
+        top: -40px;
+        left: 30px;    
+        width: 500px;
+    }
+
+    .active-flower {
+        width: 170px;
+        right: 75px;
+        top: -195px;
+    }
+
+    .active-item::before {
+        width: 200px;
+        height: 200px;
+        top: -105px;
+        left: -12px;
+    }
+
+    .active-item::after {
+        width: 200px;
+        height: 200px;
+        bottom: -60px;
+        right: -50px;
+    }
+
+    /* about */
+    .aboutBox {
+        padding: 340px 0 150px;
+    }
+
+    .aboutTitle img{
+        width: 220px;
+    }
+
+    .aboutcard::after {
+        width: 420px;
+        height: 420px;
         top: 90px;
-    }
-    .preface02{
-        left: 35px;
-        top: 120px;
-    }
-    .preface03{
-        right: 20px;
-        top: 170px;
+        right: -187px;
     }
 
-    .productIntroduction{
-        height: 800px;
-    }
-    .productText{
-        font-size: 18px;
-    }
-    .productPhoto {
-        height: 250px;
+    .aboutpeople{
+        margin: 25px 130px 0;
     }
 
-    .logoIntroduction{
-        height: 800px;
-    }
-    .logoText{
-        font-size: 18px;
-    }
-    .logoPhoto {
-        height: 250px;
+    .aboutpeople img {
+        padding: 18px 15px;
     }
 
-    .packageIntroduction{
-        height: 800px;
-    }
-    .packageText{
-        font-size: 18px;
-    }
-    .packagePhoto {
-        height: 250px;
+    .aboutpeople p {
+        padding: 10px 0 20px;
+        font-size: 17px;
     }
 
-    .perfumeIntroduction{
-        height: 1000px;
-    }
-    .perfumeText{
-        font-size: 18px;
-    }
-    .perfumePhoto {
-        height: 250px;
+    .aboutBox .owl-carousel .owl-stage-outer {
+        left: -72px;
+    }    
+
+    .about-inner .owl-dots {
+        left: 44px;
+        position: absolute;
+        margin: 0 10px 10px;
     }
 
-    /* 回頂端按鈕 */
-    .toTopBtn{
-        width: 45px;
-        height: 45px;
+    /* footer */
+    .info {
+        padding: 32px 0 0;
+    }    
+
+    .info p {
+        font-size: 17px;
     }
 
-    /* 底部 */
-    .footer{
-        height: 250px;
-        padding: 25px 30px 0;
+    .icon {
+        letter-spacing: 16px;
+        padding-bottom: 24px;
+    }
+
+    .icon a {
+        font-size: 45px;
+    }
+
+    
+
+}
+
+/* 手機 */
+@media (min-width:376px) and (max-width:575.9px) {
+ .phone{
+     flex-direction: column-reverse;
+ }
+
+ .phone li{
+     float: left;
+     margin-right: 25px;
+     line-height: 40px;
+ }
+
+     /* menu */
+     .navbar-nav{
         font-size: 16px;
     }
 
-}
-
-@media (min-width:321px) and (max-width:375.9px) {
- /* top */
- .navbar{
-    font-size: 15px;
-}
-.navbar .dropdown-item{
-    font-size: 13px;
-}
-.navbar-brand img {
-    width: 55px;
-    margin-left: 10px;
-}
-.navbar-toggler {
-    padding: 5px 7px;
-    font-size: 15px;
-}
-.navbar-toggler-icon {
-    width: 15px;
-    height: 15px;
-}
-.banner {
-    height: 82px;
-}
-.owl-theme .owl-dots .owl-dot span {
-    width: 8px;
-    height: 8px;
-    margin: 16px 8px;
-}
-
-/* 介紹  */
-.phone{
-    flex-direction: column-reverse;
-}
-
-.preface {
-    height: 200px;
-    font-size: 14px;
-}
-.preface01{
-    left: 25px;
-    top: 70px;
-}
-.preface02{
-    left: 35px;
-    top: 100px;
-}
-.preface03{
-    right: 20px;
-    top: 150px;
-}
-
-.productIntroduction{
-    height: 650px;
-}
-.productText{
-    font-size: 14px;
-}
-.productPhoto {
-    height: 200px;
-}
-
-.logoIntroduction{
-    height: 650px;
-}
-.logoText{
-    font-size: 14px;
-}
-.logoPhoto {
-    height: 200px;
-}
-
-.packageIntroduction{
-    height: 650px;
-}
-.packageText{
-    font-size: 14px;
-}
-.packagePhoto {
-    height: 200px;
-}
-
-.perfumeIntroduction{
-    height: 750px;
-}
-.perfumeText{
-    font-size: 14px;
-}
-.perfumePhoto {
-    height: 200px;
-}
-
-/* 回頂端按鈕 */
-.toTopBtn{
-    width: 40px;
-    height: 40px;
-}
-
-/* 底部 */
-.footer{
-    height: 200px;
-    padding: 25px 30px 0;
-    font-size: 10px;
-}
-}
-
-@media (min-width:0px) and (max-width:321px) {
-    /* top */
-    .navbar{
-        font-size: 14px;
-    }
-    .navbar .dropdown-item{
-        font-size: 10px;
-    }
-    .navbar-brand img {
-        width: 40px;
-        margin-left: 10px;
-    }
     .navbar-toggler {
-        padding: 5px 7px;
-        font-size: 15px;
-    }
-    .navbar-toggler-icon {
-        width: 15px;
-        height: 15px;
-    }
-    .banner {
-        height: 82px;
-    }
-    .owl-theme .owl-dots .owl-dot span {
-        width: 5px;
-        height: 5px;
-        margin: 3px 5px;
+        padding: 6px 10px;
+        font-size: 18px
     }
 
-    /* 介紹  */
-    .phone{
-        flex-direction: column-reverse;
-    }
-
-    .preface {
-        height: 200px;
-        font-size: 10px;
-    }
-    .preface01{
-        left: 25px;
-        top: 70px;
-    }
-    .preface02{
-        left: 35px;
-        top: 100px;
-    }
-    .preface03{
-        right: 20px;
-        top: 150px;
-    }
-
-    .productText{
-        font-size: 10px;
-    }
-    .productPhoto {
-        height: 150px;
+    .navbar-brand{
+        width: 200px;
     }
     
-    .logoIntroduction{
-        height: 400px;
+    .navbar-brand img{
+        width: 250px;
     }
-    .logoText{
-        font-size: 10px;
+
+    .dropdown-item{
+        font-size: 16px;
     }
-    .logoPhoto {
+    
+
+    .banner{
         height: 150px;
     }
 
-    .packageIntroduction{
-        height: 400px;
+
+    /* news */
+    .newsBox{
+        padding: 55px 0 150px;
     }
-    .packageText{
-        font-size: 10px;
+
+    .new-item{
+    margin-bottom: 0px;
     }
-    .packagePhoto {
+
+    .new-item .newsTitle{
+        font-size: medium;
+        padding: 6px 24px;
+    }
+
+    .new-item .newslist ul {
+        margin-bottom: 20px;
+    }
+
+    .new-item .newslist ul li{
+        font-size: 11px;
+        padding: 6px 10px;
+        border-bottom-width: 0.5px;
+        margin: 0 16px;
+    }
+
+    .newsBox .owl-dots{
+        left: 165px;
+        bottom: 0px;
+    }
+
+    .new-inner::before {
+        width: 100%;
+        height: 90px;
+        bottom: -50px;
+        left: -160px;
+    }
+
+    .new-inner::after {
+        width: 100%;
+        height: 90px;
+        top: -35px;
+        right: -160px;
+    }
+
+    /* active */
+    .activeBox{
+        padding: 20px 0;
+        width: 100%;
+        height: 176px;
+    }
+
+    .activeBox::before{
+        width: 100%;
+        height: 95px;
+        top: -94px;
+    }
+
+    .activeBox-bottom{
+        width: 100%;
+        height: 187px;
+        bottom: -60px;
+    }
+    
+    .active-flower {
+        width: 200px;
+        height: 143px;
+        right: 0px;
+        top: -141px;
+    }
+
+    .active-item::before{
+        width: 180px;
+        top: -105px;
+        left: 5px;
+    }
+
+    .active-item::after{
+        width: 170px;
+        height: 170px;
+        bottom: 0px;
+        right: -40px;
+    }
+
+    .activeTitle {
+        font-size: 20px;
+        letter-spacing: 4px;
+        top: -65px;
+    }
+
+    .activeTitle::before {
+        width: 113px;
+        top: -10px;
+    }
+    .activelist {
+        margin: -80px 0;
+    }
+    
+    .listItem a{
+        letter-spacing: 4px;
+        font-size: 16px;
+        line-height: 0px;
+    }
+    
+
+    .active-pictureBox {
+        padding: 8px;
+        width: 350px;
+        top: -60px;
+        left: 10px;
+        height: 188px;
+    }
+
+    .Imgitem{
+        height: 250px;
+    }
+
+
+    /* about */
+    .aboutBox{
+        padding: 180px 0 50px;
+        margin-top: -50px;
+    }
+
+    .aboutTitle img {
+        height: 80px;
+    }
+
+    .aboutcard{
+        padding: 12px;
+    }
+
+    .aboutcard::after{
+        width: 280px;
+        height: 280px;
+        top: 85px;
+        right: -123px;
+    }
+
+    .aboutpeople{
+        width: 200px;
+        height: 300px;
+        margin: 30px auto 0;
+    }
+
+    .aboutpeople img {
+        padding: 10px 14px;
+    }
+
+    .aboutpeople p{
+        padding: 16px 0 5px;
+        font-size: 15px;
+        margin: 0 1px;
+    }
+
+    .aboutBox .owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+        margin: 5px 5px;
+    }
+
+
+    /* FOOTER */
+    .info {
+        padding: 20px 0 0;
+      }
+
+    .info p{
+        font-size: 14px;
+    }
+
+    .icon{
+        padding-top: 0px;
+        letter-spacing: 15px;
+    }
+    
+    .icon a{
+        font-size: 40px;
+    }
+    
+
+}
+
+/* 手機 小 */
+@media (min-width:321px) and (max-width:375.9px) {
+ .phone{
+     flex-direction: column-reverse;
+ }
+
+ .phone li{
+    float:left;
+    margin-right:25px;
+    line-height: 70px;
+ }
+
+    /* menu */
+    .navbar-nav{
+        font-size: 15px;
+    }
+
+    .navbar-toggler {
+        padding: 5px 7px;
+        font-size: 11px;
+    }
+    .navbar-brand img {
+        width: 230px;
+    }
+
+    .navbar-brand{
+        width: 200px;
+    }
+
+    .dropdown-item{
+        font-size: 13px;
+    }
+    
+
+    .banner{
+        height: 130px;
+    }
+
+
+    /* news */
+    .newsBox{
+        padding: 55px 0 150px;
+    }
+
+    .new-item{
+    margin-bottom: 0px;
+    }
+
+    .new-item .newsTitle{
+        font-size: 17px;
+        padding: 6px 12px;
+    }
+
+    .new-item .newslist ul {
+        margin-bottom: 20px;
+    }
+
+    .new-item .newslist ul li{
+        font-size: 14px;
+        padding: 6px 8px;
+        border-bottom-width: 0.5px;
+        margin: 0 16px;
+    }
+
+    .newsBox .owl-dots{
+        left: 152px;
+        bottom: 0px;
+    }
+
+    .new-inner::before {
+        width: 100%;
+        height: 85px;
+        bottom: -45px;
+        left: -141px;
+    }
+
+    .new-inner::after {
+        width: 100%;
+        height: 80px;
+        top: -30px;
+        right: -135px;
+    }
+
+    .newsBox.owl-theme .owl-dots .owl-dot span {
+        width: 8px;
+        height: 8px;
+    }
+
+    /* active */
+   
+    .activeBox{
+        padding: 60px 0;
+        width: 100%;
+        height: 170px;
+    }
+
+    .activeBox::before{
+        width: 100%;
+        height: 32px;
+        top: -31px;
+    }
+
+    .activeBox-bottom{
+        width: 100%;
+        height: 156px;
+        bottom: -51px;
+    }
+    
+    .active-flower {
+        width: 100%;
+        height: 85px;
+        right: 0px;
+        top: 0px;
+    }
+
+    .active-item::before{
+        width: 120px;
+        top: -140px;
+        left: 50px;
+    }
+
+    .active-item::after{
+        width: 120px;
+        bottom: -205px;
+        right: -25px;
+    }
+
+    .activeTitle {
+        font-size: 17px;
+        letter-spacing: 3px;
+        top: 115px;
+    }
+
+    .activeTitle::before {
+        width: 100px;
+        top: -10px;
+    }
+
+    .activelist{
+        top: 110px;
+    }
+
+    .activelist li{
+        margin-top: -30px;
+    }
+    
+    .listItem a{
+        letter-spacing: 4px;
+        font-size: 15px;
+        line-height: 57px;
+    }
+
+    .active-pictureBox {
+        padding: 8px;
+        width: 275px;
+        transform: rotate(10deg);
+        bottom: -135px;   
         height: 150px;
+        position: absolute;
+        left: 80px;
     }
 
-    .perfumeIntroduction{
-        height: 500px;
-    }
-    .perfumeText{
-        font-size: 10px;
-    }
-    .perfumePhoto {
-        height: 150px;
-    }
-
-    /* 回頂端按鈕 */
-    .toTopBtn{
-        width: 40px;
-        height: 40px;
-    }
-
-    /* 底部 */
-    .footer{
+    .Imgitem{
         height: 200px;
-        padding: 25px 30px 0;
-        font-size: 10px;
+        width: 100%;
     }
-        
 
+
+    /* about */
+    .aboutBox{
+        padding: 140px 0 50px;
+        margin-top: -30px;
+    }
+
+    .aboutTitle img {
+        height: 65px;
+    }
+
+    .aboutcard{
+        padding: 7px;
+    }
+
+    .aboutcard::after{
+        width: 135px;
+        top: -85px;
+        right: -60px;
+    }
+
+    .aboutpeople{
+        width: 190px;
+        height: 280px;
+        margin: 25px auto 15px;
+    }
+
+    .aboutpeople img {
+        padding: 12px 14px;
+    }
+
+    .aboutpeople p{
+        padding: 8px 0 10px;
+        font-size: 13px;
+        margin: 0 1px;
+    }
+
+    .aboutBox .owl-carousel .owl-stage-outer {
+        left: -20px;
+    }
+    
+    .about-inner .owl-dots{
+        font-size: xx-small;
+        margin: 1px 37px 0 0;
+    }
+
+    .aboutBox .owl-theme .owl-dots .owl-dot span {
+        width: 6px;
+        height: 6px;
+        margin: 5px 6px;
+    }
+
+
+    /* FOOTER */
+    .info {
+        padding: 20px 0 0;
+      }
+
+    .info p{
+        font-size: 12px;
+    }
+
+    .icon{
+        padding: 0 0 15px;
+        letter-spacing: 13px;
+    }
+    
+    .icon a{
+        font-size: 35px;
+    }
+
+    
+
+}
+
+/* X */
+@media (min-width:0px) and (max-width:320px) {
+
+    /* menu */
+    .navbar-nav{
+        font-size: smaller;
+    }
+
+    .navbar-toggler {
+        padding: 4px 6px;
+        font-size: 8px
+    }
+
+    .navbar-brand{
+        width: 180px;
+    }
+
+    .dropdown-item{
+        font-size: x-small;
+    }
+    
+
+    .banner{
+        height: 105px;
+    }
+
+
+    /* news */
+    .newsBox{
+        padding: 55px 0 108px;
+    }
+
+    .new-item{
+    margin-bottom: 0px;
+    }
+
+    .new-item .newsTitle{
+        font-size: small;
+        padding: 6px 12px;
+    }
+
+    .new-item .newslist ul {
+        margin-bottom: 20px;
+    }
+
+    .new-item .newslist ul li{
+        font-size: x-small;
+        padding: 6px 8px;
+        border-bottom-width: 0.5px;
+        margin: 0 16px;
+    }
+
+    .newsBox .owl-dots{
+        left: 110px;
+        bottom: 0px;
+    }
+
+    .new-inner::before {
+        width: 100%;
+        height: 75px;
+        bottom: -35px;
+        left: -120px;
+    }
+
+    .new-inner::after {
+        width: 100%;
+        height: 70px;
+        top: -20px;
+        right: -110px;
+    }
+
+    /* active */
+    .activeBox{
+        padding: 20px 0;
+        width: 100%;
+        height: 120px;
+    }
+
+    .activeBox::before{
+        width: 100%;
+        height: 70px;
+        top: -68px;
+    }
+
+    .activeBox-bottom{
+        width: 100%;
+        height: 172px;
+        bottom: -50px;
+    }
+    
+    .active-flower {
+        width: 100%;
+        height: 80px;
+        right: -105px;
+        top: -222px;
+    }
+
+    .active-item::before{
+        width: 100%;
+        height: 45px;
+        top: -195px;
+        left: -5px;
+    }
+
+    .active-item::after{
+        width: 100%;
+        height: 56px;
+        bottom: 25px;
+        right: -125px;
+    }
+
+    .activeTitle {
+        font-size: 14px;
+        margin: -50px 0 -5px;
+        letter-spacing: 4px;
+        top: 120px;
+    }
+
+    .activeTitle::before {
+        width: 80px;
+        top: -17px;
+        left: 1px;
+    }
+
+    .activelist{
+        margin-top: 10px;
+        top: 125px;
+    }
+
+    .activelist li{
+        margin-top: -40px;
+    }
+    
+    .listItem a{
+        letter-spacing: 4px;
+        font-size: 10px;
+        font-weight: normal;
+        line-height: 70px;
+    }
+
+    .active-pictureBox {
+        padding: 8px;
+        width: 170px;
+        position: absolute;
+        bottom: 62px;
+        right: 7px;
+    }
+
+    .Imgitem{
+        height: 110px;
+        width: 100%;
+    }
+
+
+    /* about */
+    .aboutBox{
+        padding: 80px 0 50px;
+        margin-top: -30px;
+    }
+
+    .aboutTitle img {
+        height: 45px;
+    }
+
+    .aboutcard{
+        padding: 7px;
+    }
+
+    .aboutcard::after{
+        width: 150px;
+        height: 150px;
+        top: 70px;
+        right: -70px;
+    }
+
+    .aboutpeople{
+        width: 125px;
+        height: 195px;
+        margin: 15px auto;
+    }
+
+    .aboutpeople img {
+        padding: 4px 6px;
+    }
+
+    .aboutpeople p{
+        padding: 5px 0 10px;
+        font-size: xx-small;
+        margin: 0 1px;
+    }
+    
+    .about-inner .owl-dots{
+        font-size: xx-small;
+        margin: 1px;
+    }
+
+    .owl-theme .owl-dots .owl-dot span {
+        width: 6px;
+        height: 6px;
+    }
+
+
+    /* FOOTER */
+    .info {
+        padding: 20px 0;
+      }
+
+    .info p{
+        font-size: 9px;
+    }
+
+    .icon{
+        padding-top: 15px;
+        letter-spacing: 8px;
+    }
+    
+    .icon a{
+        font-size: 20px;
+    }
+    
 }
