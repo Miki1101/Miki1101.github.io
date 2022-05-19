@@ -1,68 +1,46 @@
 $(function () {
 
-	var PicAttr = [
-		"img/active-01.png",
-		"img/active-02.png",
-		"img/active-03.png",
-		"img/active-04.png",
-		"img/active-05.png",
-		"img/active-06.png"
-	]
-	for (var i = 0; i < PicAttr.length; i++) {
-		//加入圖片到html裡
-		var Imgs = ("<img class='Imgitem' src=" + PicAttr[i] + ">")
-		$(".active-picture").append(Imgs)
-	}
-
-	//判斷滑鼠移入到第幾個li就顯示第幾個img
-	$(function () {
-		if ($(".Imgitem").css('z-index') == '0') {
-			//如果沒有內容就顯示第一個
-			$(".Imgitem").eq(0).addClass("show");
-		}
-		$(".listItem").mouseenter(function () {
-			$(".Imgitem").hide();
-			var max = $(".activelist li").length;
-			var num = max - $(this).nextAll().length;
-			//目前是第幾個被滑鼠移入 
-			$(".Imgitem").eq(num - 1).show();
-			//顯示第幾個項目
-		})
-	})
-
-	//active-picture父層高度塌陷(因絕對定位)
-	$(function () {
-		//抓取子元素的高度帶入父層
-		var box = $(".Imgitem").innerHeight();
-		$(".active-pictureBox").height(box);
-	  
-	   })
-
-	//連結a標籤滑動效果
-	$(document).on('click','a',function(event){
-		event
-		// .preventDefault()
-		;
-		var target= $(this).attr("href ");
-		$('html,body').animate({
-	   scrollTop: $(target).offset().top
-		},500);
-		
+  // $(document).on('click','a',function(event){
+	// 	event.preventDefault();
+	// 	var target= $(this).attr("href");
+	// 	$('html,body').animate({
+	//    scrollTop: $(target).offset().top
+	// 	},500);
 	   
-	  });
-
-
-	  
-	//   $('.swiper-slide').click(function(){
-    //     var url=$(this).attr('data-url');
-    //     window.location.href=url;
-    //   });
-
-	  
-
+	//   });
+    $("a").on("click", function () {
+      var hrefLink = $(this).attr("href");
+      console.log(hrefLink);
+      $("html,body").animate(
+        {
+          scrollTop: $(hrefLink).offset().top //直接到相對位置
+        },
+        800
+      );
+    });
+    
+    $(document).ready(function () {
+        // 捲軸偵測距離頂部超過 '數字' 才顯示按鈕
+        $(window).scroll(function () {
+          if ($(window).scrollTop() > 500) {
+            if ($(".toTopBtn").hasClass("hide")) {
+              $(".toTopBtn").toggleClass("hide");
+            }
+          } else {
+            $(".toTopBtn").addClass("hide");
+          }
+        });
+      
+        // 點擊按鈕回頂部
+        $(".toTopBtn").on("click", function (event) {
+          $("html, body").animate(
+            {
+              scrollTop: 0
+            },
+            500 // 回頂部時間為 500 毫秒
+          );
+        });
+      });
+    
 })
-
-
-
-
 
